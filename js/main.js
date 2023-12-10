@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Custom Scroll Bar
-    window.onscroll = function() { mufunction() };
+    window.onscroll = function() {
+        mufunction()
+    };
 
     function mufunction() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -52,19 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var scrolled = (winScroll / height) * 100;
         document.getElementById('scroll-bar').style.width = scrolled + '%';
     }
-
-    // Play Video Repeat
-
-    var video = document.querySelector('.video-container video');
-
-    // Listen for the "ended" event
-    video.addEventListener('ended', function() {
-        // Reset the video to the beginning
-        video.currentTime = 0;
-
-        // Play the video again
-        video.play();
-    });
 
     // Countdown Timer
     // Set the release date (December 31, 2023, 00:00:00 UTC)
@@ -95,4 +84,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial update
     updateTimer();
+
+    // Play Video Repeat
+    var video = document.querySelector('.video-container video');
+
+    // Listen for the "ended" event
+    video.addEventListener('ended', function() {
+        // Reset the video to the beginning
+        video.currentTime = 0;
+
+        // Play the video again
+        video.play();
+    });
+
+    // Play the video when the page loads
+    video.play();
 });
