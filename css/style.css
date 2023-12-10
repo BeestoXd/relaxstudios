@@ -535,6 +535,10 @@ html::-webkit-scrollbar {
     .screenshots-content {
         grid-template-columns: repeat(auto-fir, minmax(250px, 300px));
     }
+    .video-container {
+        width: 80%;
+        margin: 2rem auto;
+    }
 }
 
 @media (max-width: 560px) {
@@ -563,6 +567,10 @@ html::-webkit-scrollbar {
     }
     .download-links {
         grid-template-columns: 1fr;
+    }
+    .video-container {
+        width: 100%;
+        margin: 2rem auto;
     }
 }
 
