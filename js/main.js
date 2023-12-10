@@ -87,16 +87,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Play Video Repeat
     var video = document.querySelector('.video-container video');
-
-    // Listen for the "ended" event
-    video.addEventListener('ended', function() {
-        // Reset the video to the beginning
-        video.currentTime = 0;
-
-        // Play the video again
-        video.play();
-    });
-
-    // Play the video when the page loads
-    video.play();
 });
